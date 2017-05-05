@@ -1,0 +1,164 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <groupId>com.lcl</groupId>
+  <artifactId>ssm</artifactId>
+  <packaging>war</packaging>
+  <version>0.0.1-SNAPSHOT</version>
+  <name>ssm Maven Webapp</name>
+  <url>http://maven.apache.org</url>
+  
+  <properties>		
+	    <!-- spring版本号 -->
+	    <spring.version>4.1.7.RELEASE</spring.version>
+	    <!-- mybatis版本号 -->
+	    <mybatis.version>3.3.0</mybatis.version>
+  </properties>
+  
+  
+  <dependencies>
+  	<!-- mybatis -->
+  	<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis</artifactId>
+			<version>${mybatis.version}</version>
+	</dependency>
+	<dependency>
+			<groupId>org.mybatis</groupId>
+			<artifactId>mybatis-spring</artifactId>
+			<version>1.2.3</version>
+	</dependency>
+	
+	 <!-- spring -->
+	 <!-- 1)Spring核心 -->
+	 <dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-beans</artifactId>
+			<version> ${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version> ${spring.version}</version>
+		</dependency>
+		<!-- 2)Spring DAO和Service层 -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-jdbc</artifactId>
+			<version> ${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-tx</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 3)Spring mvc -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-web</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-webmvc</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 4)Spring test -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-test</artifactId>
+			<version>${spring.version}</version>
+		</dependency>
+		<!-- 5)Spring 支持 Freemarker-->
+		 <dependency>  
+            <groupId>org.springframework</groupId>  
+            <artifactId>spring-context-support</artifactId>  
+            <version>${spring.version}</version>  
+        </dependency>  
+		
+		<!-- Freemarker -->
+		<dependency>  
+            <groupId>org.freemarker</groupId>  
+            <artifactId>freemarker</artifactId>  
+            <version>2.3.23</version>  
+        </dependency> 
+		
+<dependency>
+      <groupId>freemarker</groupId>
+      <artifactId>freemarker</artifactId>
+ <version>2.3.8</version>	
+ </dependency> 		
+		
+		<!-- Servlet: 在对control做单元测试时依赖-->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+		</dependency>
+  
+  		<!-- 数据库  -->
+  		<dependency>
+			<groupId>mysql</groupId>
+			<artifactId>mysql-connector-java</artifactId>
+			<version>5.1.37</version>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>c3p0</groupId>
+			<artifactId>c3p0</artifactId>
+			<version>0.9.1.2</version>
+		</dependency>
+	   <!-- 单元测试 -->
+	    <dependency>
+	      <groupId>junit</groupId>
+	      <artifactId>junit</artifactId>
+	      <version>4.10</version>
+	      <scope>test</scope>
+	    </dependency>
+	    <!-- slf4-logback日志 -->
+		<dependency>
+			<groupId>ch.qos.logback</groupId>
+			<artifactId>logback-classic</artifactId>
+			<version>1.1.1</version>
+		</dependency>
+		<dependency>  
+		    <groupId>org.logback-extensions</groupId>  
+		    <artifactId>logback-ext-spring</artifactId>  
+		    <version>0.1.2</version>  
+		</dependency>  
+		
+	    <!-- 导入java ee jar 包 -->
+		<dependency>
+			<groupId>javax</groupId>
+			<artifactId>javaee-api</artifactId>
+			<version>7.0</version>
+		</dependency>
+		<!-- httpClient -->
+		<dependency>
+			  <groupId>org.apache.httpcomponents</groupId>
+			  <artifactId>httpclient</artifactId>
+			  <version>4.5.3</version>
+		</dependency>
+  </dependencies>
+  
+  <build>
+    <finalName>ssm</finalName>
+    <plugins>
+    	<!-- 指明编译代码的jdk版本 -->	
+		<plugin>  
+			 <groupId>org.apache.maven.plugins</groupId>  
+			 <artifactId>maven-compiler-plugin</artifactId>  
+			 <version>2.3.2</version>  
+			 <configuration>  
+				  <source>1.7</source>  
+				  <target>1.7</target>  
+			 </configuration>  
+		</plugin>
+	</plugins>		
+  </build>
+</project>
