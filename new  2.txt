@@ -1,0 +1,28 @@
+git pull origin master
+git push  origin master
+
+git add --all
+git commit -m "add"
+
+
+
+Failed to load ApplicationContext解决办法 :
+http://blog.csdn.net/yang_734664103/article/details/16797999
+
+java.lang.NoSuchMethodError: org.springframework解决办法: 
+http://stackoverflow.com/questions/8237181/spring-junit-test-error/36286886#36286886
+
+
+localhost:8088/ssm/book/list
+localhost:8088/ssm/html/BookController/list.html
+
+同一个文件: 
+没有add:  Untracked files
+add后:  Changes to be committed
+add后再次修改: Changes not staged for commit
+nothing to commit (working directory clean)
+
+$ git remote   
+$ git remote -v
+
+localhost:8088/ssm/html/BookController/list.jsp
